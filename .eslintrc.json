@@ -1,7 +1,6 @@
 {
     "env": {
       "node": true,
-      "browser": true,
       "es6": true
     },
     "parser": "@typescript-eslint/parser",
@@ -11,6 +10,9 @@
       "ecmaFeatures": {
         "jsx": true
       }
+    },
+    "globals": {
+      "process": true
     },
     "extends": [
       "eslint:recommended",

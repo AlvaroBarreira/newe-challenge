@@ -1,6 +1,7 @@
 import React from "react";
 import {BrowserRouter as Router, Routes, Route, Navigate} from "react-router-dom";
 
+import PokemonDataProvider from "../Contexts/PokemonDataProvider";
 import {Home, Login, Detail} from "../Views";
 
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
@@ -22,17 +23,19 @@ const IndexRoutes = () => {
   }
 
   return (
-    <Router>
-      <Routes>
-        <Route element={<Login />} path="/login" />
-        <Route element={<PrivateHome />} path="/home">
-          <Route element={<Home />} path="" />
-        </Route>
-        <Route element={<PrivateDetail />} path="/home/:pokemon-detail">
-          <Route element={<Detail />} path="" />
-        </Route>
-      </Routes>
-    </Router>
+    <PokemonDataProvider>
+      <Router>
+        <Routes>
+          <Route element={<Login />} path="/login" />
+          <Route element={<PrivateHome />} path="/">
+            <Route element={<Home />} path="/" />
+          </Route>
+          <Route element={<PrivateDetail />} path="/:pokemon-detail">
+            <Route element={<Detail />} path="/:pokemon-detail" />
+          </Route>
+        </Routes>
+      </Router>
+    </PokemonDataProvider>
   );
 };
 

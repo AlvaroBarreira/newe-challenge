@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap');
+
+.pokemon-card__information {
+    display: flex;
+    font-family: 'Carter One', cursive;
+}
+
+
+.pokemon-card__list {
+    width: 50%;
+}
+
+.pokemon-card__item {
+    text-transform: capitalize;
+    margin-left: 30px;
+}
+
+.pokemon-card__additional-information {
+    width: 50%;
+    display: block;
+    font-family: 'Carter One', cursive;
+}

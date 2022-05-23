@@ -1,0 +1,82 @@
+main {
+    display: block;
+}
+
+.modal-list__container {
+    width: 200px;
+    background: rgba(0, 0, 0, 0.35);
+    position: relative;
+    top: 4px;
+    left: 168px;
+    height: 50px;
+    border-radius: 5px;
+    border-bottom: 3px solid #62cebe;
+    pointer-events: none;
+}
+
+
+.modal-list__divider {
+    width: 200px;
+    border: 1px solid black;
+    background-color: #62cebe;
+}
+
+.modal-list__container::before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 41px solid #62cebe;
+    border-right: 29px solid transparent;
+    border-left: 29px solid transparent;
+    position: relative;
+    top: 93px;
+}
+
+.modal-list__container span {
+    -webkit-text-stroke: 1px black;
+  color: white; 
+  text-align: center;
+  width: fit-content;
+  margin: auto;
+  display: flex;
+  line-height: 5px;
+  font-size: 1.2rem;
+}
+
+@media screen and (max-width: 1200px) {
+    .modal-list__container {
+        left: 108px;
+    } 
+}
+
+@media screen and (max-width: 900px) {
+    .modal-list__container {
+        width: 150px;
+        left: 78px;
+    } 
+
+    .modal-list__container::before {
+        content: "";
+        width: 0;
+        height: 0;
+        border-top: 31px solid #62cebe;
+        border-right: 22px solid transparent;
+        border-left: 22px solid transparent;
+        position: relative;
+        top: 83px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .modal-list__container {
+        left: 48px;
+    } 
+}
+
+
+@media screen and (max-width: 500px) {
+    .modal-list__container {
+        width: 100px;
+        left: 48px;
+    } 
+}
