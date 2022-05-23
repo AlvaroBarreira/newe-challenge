@@ -32,6 +32,20 @@ const useStyles = makeStyles({
     borderRadius: "10px",
     overflowX: "hidden",
   },
+  ["@media (max-width: 1200px)"]: {
+    generalContainer: {
+      backgroundColor: "#dbc4f9",
+      height: "fit-content",
+      width: "100%",
+    },
+  },
+  ["@media (max-width: 900px)"]: {
+    generalContainer: {
+      backgroundColor: "#dbc4f9",
+      height: "fit-content",
+      width: "100%",
+    },
+  },
   ["@media (max-width: 600px)"]: {
     // eslint-disable-line no-useless-computed-key
     generalContainer: {
@@ -52,7 +66,7 @@ const useStyles = makeStyles({
     display: "table",
     width: "30%",
     height: "600px",
-    margin: "auto",
+    margin: "auto !important",
   },
 });
 

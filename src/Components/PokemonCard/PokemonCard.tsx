@@ -23,13 +23,13 @@ const PokemonCard = () => {
     <Card
       sx={{
         maxWidth: 345,
-        margin: "auto",
         display: "table-cell",
         verticalAlign: "middle",
         background: "transparent",
         border: "none",
         borderRadius: "0",
         boxShadow: "0",
+        margin: "auto !important",
       }}
     >
       {pokemonCardData.sprites ? (
@@ -40,12 +40,12 @@ const PokemonCard = () => {
             component="img"
             height="320px"
             image={pokemonCardData.sprites}
-            sx={{objectFit: "contain"}}
+            sx={{objectFit: "contain", margin: "auto"}}
             width="320px"
             //   image={pokemonData.sprites.back_default}
           />
           <CardContent>
-            <h1 style={{display: "flex", margin: "auto", width: "fit-content"}}>
+            <h1 style={{display: "flex", margin: "auto", width: "fit-content", fontSize: "1.1rem"}}>
               Pokemon information
             </h1>
             <div className="pokemon-card__information">
